@@ -37,6 +37,12 @@
 			{
 				"command" : 1,
 				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
 				"line" : 18,
 				"parent" : 0
 			},
@@ -75,46 +81,46 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"define" : "BOOST_ALL_NO_LIB"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"define" : "BOOST_FILESYSTEM_DYN_LINK"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"define" : "BOOST_REGEX_DYN_LINK"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "/home/pi/code/DTB_Lab/Include"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"path" : "/home/pi/code/DTB_Lab/_libMQTT"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "/home/pi/code/DTB_Lab/_libUtils"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "/home/pi/code/DTB_Lab/_libUtils/INIreader"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "/home/pi/code/DTB_Lab/_libUtils/JSON"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "/home/pi/code/DTB_Lab/_libUtils/SerialLink"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 7,
 					"path" : "/home/pi/code/DTB_Lab/_libSenseHAT"
 				}
 			],
@@ -134,19 +140,19 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 3,
+			"backtrace" : 4,
 			"id" : "includes::@ec6b046bd4167282fc50"
 		},
 		{
-			"backtrace" : 6,
+			"backtrace" : 7,
 			"id" : "_libSenseHAT::@ab61df989a41e6781e31"
 		},
 		{
-			"backtrace" : 5,
+			"backtrace" : 6,
 			"id" : "_libUtils::@d2c010e5408ee449679c"
 		},
 		{
-			"backtrace" : 4,
+			"backtrace" : 5,
 			"id" : "_libMQTT::@f88fa25902744fb0ae6a"
 		}
 	],
@@ -170,21 +176,26 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "../Include/libincludes.a",
+				"fragment" : "-lpthread",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "../_libMQTT/lib_libMQTT.a",
+				"fragment" : "../Include/libincludes.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "../_libUtils/lib_libUtils.a",
+				"fragment" : "../_libMQTT/lib_libMQTT.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 6,
+				"fragment" : "../_libUtils/lib_libUtils.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
 				"fragment" : "../_libSenseHAT/lib_libSenseHAT.a",
 				"role" : "libraries"
 			},

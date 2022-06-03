@@ -86,7 +86,7 @@ void DataBase()
         std::string location1;
         std::string location2;
         bool node1 = false;
-        bool node2 = true;
+        bool node2 = false;
 
         while (!node1 && !node2)
         {
