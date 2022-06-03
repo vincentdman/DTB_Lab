@@ -25,7 +25,7 @@
 #define DockButtonBit 0x04
 
 //MQTT configuration: 
-const std::string appname = "roombatvms";
+const std::string appname = "DataBaseMV";
 const std::string clientname = "mode";
 const std::string host =  "broker.mqttdashboard.com";//"broker.hivemq.com";
 const int port = 1883;

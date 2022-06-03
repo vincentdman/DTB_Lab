@@ -24,6 +24,8 @@ int main(void)
 {
     struct sigaction sa;
     set_signal(sa);
+
+    #ifdef DATABASE
     sqlite3 *db;
     int rc;
     rc = sqlite3_open("test.db", &db);
@@ -39,21 +41,27 @@ int main(void)
            // sleep(1);
         }
     
-
+    #else
+    while(1)
+    {
     
-  
-    
-    MqttHandler.publishInfo( std::to_string(SensHat.get_temperature() ), "roombatvms/Temperature");
-    MqttHandler.publishInfo( std::to_string(SensHat.get_humidity() ), "roombatvms/Humidity");
-    MqttHandler.publishInfo( std::to_string(SensHat.get_pressure() ), "roombatvms/Pressure");
+    MqttHandler.publishInfo( std::to_string(SensHat.get_temperature() ), "DataBaseMV/Temperature");
+    MqttHandler.publishInfo( std::to_string(SensHat.get_humidity() ), "DataBaseMV/Humidity");
+    MqttHandler.publishInfo( std::to_string(SensHat.get_pressure() ), "DataBaseMV/Pressure");
     sleep(1);
+    }
+    
+    #endif
+    
+   
+    
    
    
    // std::cout<<"test\n";
     // MqttHandler.publishInfo("testbericht", "roombatvms/mode");
      //sleep(1);
     //StartMainSystemThreads();    
-    }
+    
     exit(0);
     return 0;
 }

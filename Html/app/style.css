@@ -1,0 +1,30 @@
+body {
+	font-family: arial, helvetica, sans-serif;
+	background-color: #2E8B57;
+	margin: 20px;
+}
+
+header {
+	display: block;
+	font-weight: bold;
+	background-color: #66CDAA;
+	border-radius: 5px;
+	
+}
+
+footer {
+	text-align: right;
+	font-weight: bold;
+	background-color: #66CDAA;
+	border-radius: 5px;
+}
+
+table {
+	margin-top: 8px;
+}
+
+#playBtn {
+	margin-top: 70px;
+	
+}
+
