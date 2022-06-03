@@ -50,7 +50,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : " -pthread -g"
 				},
 				{
 					"fragment" : "-std=gnu++17"

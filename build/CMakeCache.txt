@@ -308,6 +308,9 @@ boost_headers_DIR:PATH=/usr/lib/arm-linux-gnueabihf/cmake/boost_headers-1.74.0
 //The directory containing a CMake configuration file for boost_regex.
 boost_regex_DIR:PATH=/usr/lib/arm-linux-gnueabihf/cmake/boost_regex-1.74.0
 
+//The directory containing a CMake configuration file for libpthread.
+libpthread_DIR:PATH=libpthread_DIR-NOTFOUND
+
 //Path to a library.
 librtimulib:FILEPATH=librtimulib-NOTFOUND
 
@@ -317,11 +320,17 @@ libsqlite3-dev_DIR:PATH=libsqlite3-dev_DIR-NOTFOUND
 //The directory containing a CMake configuration file for libsqlite3.
 libsqlite3_DIR:PATH=libsqlite3_DIR-NOTFOUND
 
+//The directory containing a CMake configuration file for p.
+p_DIR:PATH=p_DIR-NOTFOUND
+
 //Path to a library.
 pkgcfg_lib_Mosquitto_mosquitto:FILEPATH=/usr/lib/arm-linux-gnueabihf/libmosquitto.so
 
 //Path to a library.
 pkgcfg_lib_mosquittopp_mosquittopp:FILEPATH=/usr/lib/arm-linux-gnueabihf/libmosquittopp.so
+
+//The directory containing a CMake configuration file for pthread.
+pthread_DIR:PATH=pthread_DIR-NOTFOUND
 
 //Value Computed by CMake
 roomba_BINARY_DIR:STATIC=/home/pi/code/DTB_Lab/build
@@ -334,6 +343,12 @@ sqlite3_DIR:PATH=sqlite3_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for sqlite.
 sqlite_DIR:PATH=sqlite_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for t.
+t_DIR:PATH=t_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for threads.
+threads_DIR:PATH=threads_DIR-NOTFOUND
 
 
 ########################

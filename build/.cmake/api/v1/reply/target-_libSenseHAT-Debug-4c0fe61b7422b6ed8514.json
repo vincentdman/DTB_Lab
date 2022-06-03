@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "_libMQTT/lib_libMQTT.a"
+			"path" : "_libSenseHAT/lib_libSenseHAT.a"
 		}
 	],
 	"backtrace" : 1,
@@ -16,7 +16,7 @@
 		],
 		"files" : 
 		[
-			"_libMQTT/CMakeLists.txt"
+			"_libSenseHAT/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -32,7 +32,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 21,
+				"line" : 20,
 				"parent" : 0
 			}
 		]
@@ -43,7 +43,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : " -pthread -g"
 				},
 				{
 					"fragment" : "-std=gnu++17"
@@ -53,27 +53,47 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/pi/code/DTB_Lab/_libMQTT"
+					"path" : "/home/pi/code/DTB_Lab/_libSenseHAT"
 				}
 			],
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
 				0,
-				2,
 				4,
-				6,
-				8
+				8,
+				10
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/pi/code/DTB_Lab/_libSenseHAT"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				2,
+				6
 			]
 		}
 	],
-	"id" : "_libMQTT::@f88fa25902744fb0ae6a",
-	"name" : "_libMQTT",
-	"nameOnDisk" : "lib_libMQTT.a",
+	"id" : "_libSenseHAT::@ab61df989a41e6781e31",
+	"name" : "_libSenseHAT",
+	"nameOnDisk" : "lib_libSenseHAT.a",
 	"paths" : 
 	{
-		"build" : "_libMQTT",
-		"source" : "_libMQTT"
+		"build" : "_libSenseHAT",
+		"source" : "_libSenseHAT"
 	},
 	"sourceGroups" : 
 	[
@@ -85,7 +105,8 @@
 				2,
 				4,
 				6,
-				8
+				8,
+				10
 			]
 		},
 		{
@@ -96,7 +117,8 @@
 				3,
 				5,
 				7,
-				9
+				9,
+				11
 			]
 		}
 	],
@@ -105,56 +127,67 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "_libMQTT/CommandProcessor.cpp",
+			"path" : "_libSenseHAT/Joystick.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "_libMQTT/CommandProcessor.h",
+			"path" : "_libSenseHAT/Joystick.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "_libSenseHAT/JoystickDevice.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "_libSenseHAT/JoystickDevice.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "_libMQTT/MQTTconfig.cpp",
+			"path" : "_libSenseHAT/LedMatrix.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "_libMQTT/MQTTconfig.h",
+			"path" : "_libSenseHAT/LedMatrix.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "_libSenseHAT/LedMatrixDevice.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "_libSenseHAT/LedMatrixDevice.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "_libMQTT/MQTTmessage.cpp",
+			"path" : "_libSenseHAT/Pixel.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "_libMQTT/MQTTmessage.h",
+			"path" : "_libSenseHAT/Pixel.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "_libMQTT/Tokenizer.cpp",
+			"path" : "_libSenseHAT/SenseHAT.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "_libMQTT/Tokenizer.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "_libMQTT/Topic.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "_libMQTT/Topic.h",
+			"path" : "_libSenseHAT/SenseHAT.h",
 			"sourceGroupIndex" : 1
 		}
 	],

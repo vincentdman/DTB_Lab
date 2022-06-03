@@ -13,5 +13,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/pi/code/DTB_Lab/_libSenseHAT
 
-CXX_FLAGS = -g -std=gnu++17
+CXX_FLAGS =  -pthread -g -std=gnu++17
 

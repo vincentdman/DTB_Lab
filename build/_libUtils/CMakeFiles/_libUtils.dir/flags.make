@@ -6,5 +6,5 @@ CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_REGEX_DYN_L
 
 CXX_INCLUDES = -I/home/pi/code/DTB_Lab/_libUtils -I/home/pi/code/DTB_Lab/_libUtils/INIreader -I/home/pi/code/DTB_Lab/_libUtils/JSON -I/home/pi/code/DTB_Lab/_libUtils/SerialLink
 
-CXX_FLAGS = -g -std=gnu++17
+CXX_FLAGS =  -pthread -g -std=gnu++17
 

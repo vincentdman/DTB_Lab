@@ -2182,6 +2182,18 @@
 			"value" : "/usr/lib/arm-linux-gnueabihf/cmake/boost_regex-1.74.0"
 		},
 		{
+			"name" : "libpthread_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for libpthread."
+				}
+			],
+			"type" : "PATH",
+			"value" : "libpthread_DIR-NOTFOUND"
+		},
+		{
 			"name" : "librtimulib",
 			"properties" : 
 			[
@@ -2638,6 +2650,18 @@
 			"value" : ""
 		},
 		{
+			"name" : "p_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for p."
+				}
+			],
+			"type" : "PATH",
+			"value" : "p_DIR-NOTFOUND"
+		},
+		{
 			"name" : "pkgcfg_lib_Mosquitto_mosquitto",
 			"properties" : 
 			[
@@ -2680,6 +2704,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "/usr/lib"
+		},
+		{
+			"name" : "pthread_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for pthread."
+				}
+			],
+			"type" : "PATH",
+			"value" : "pthread_DIR-NOTFOUND"
 		},
 		{
 			"name" : "roomba_BINARY_DIR",
@@ -2728,6 +2764,30 @@
 			],
 			"type" : "PATH",
 			"value" : "sqlite_DIR-NOTFOUND"
+		},
+		{
+			"name" : "t_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for t."
+				}
+			],
+			"type" : "PATH",
+			"value" : "t_DIR-NOTFOUND"
+		},
+		{
+			"name" : "threads_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for threads."
+				}
+			],
+			"type" : "PATH",
+			"value" : "threads_DIR-NOTFOUND"
 		}
 	],
 	"kind" : "cache",

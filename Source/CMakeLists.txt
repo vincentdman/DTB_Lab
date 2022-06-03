@@ -10,6 +10,8 @@ add_executable(
 )  
 #find_package(libsqlite3-dev 3.34.1)
 find_package (SQLite3 REQUIRED)
+
+
 include_directories(${SQLITE3_INCLUDE_DIRS})
 target_link_libraries (roomba ${SQLITE3_LIBRARIES})
 
