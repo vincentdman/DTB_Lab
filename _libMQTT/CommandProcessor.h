@@ -36,7 +36,7 @@ class CommandProcessor : public mosqpp::mosquittopp
 {
 public:
    CommandProcessor(const std::string &appname, const std::string &clientname,
-                    const std::string &host, int port);
+                    const std::string &host, const std::string &subtopic,int port);
    CommandProcessor(const CommandProcessor &other) = delete;
    CommandProcessor &operator=(const CommandProcessor &other) = delete;
    virtual ~CommandProcessor();

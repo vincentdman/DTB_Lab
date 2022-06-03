@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 sqlite3 DataBaseMV.db <<EOF
 .read tables.sql
 EOF

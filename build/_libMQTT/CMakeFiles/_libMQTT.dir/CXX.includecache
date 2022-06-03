@@ -34,32 +34,8 @@ string
 vector
 -
 
-/home/pi/code/DTB_Lab/_libMQTT/MQTTconfig.cpp
-MQTTconfig.h
-/home/pi/code/DTB_Lab/_libMQTT/MQTTconfig.h
-unistd.h
--
-
 /home/pi/code/DTB_Lab/_libMQTT/MQTTconfig.h
 string
--
-
-/home/pi/code/DTB_Lab/_libMQTT/MQTTmessage.cpp
-MQTTmessage.h
-/home/pi/code/DTB_Lab/_libMQTT/MQTTmessage.h
-
-/home/pi/code/DTB_Lab/_libMQTT/MQTTmessage.h
-mosquittopp.h
-/home/pi/code/DTB_Lab/_libMQTT/mosquittopp.h
-string
--
-
-/home/pi/code/DTB_Lab/_libMQTT/Tokenizer.cpp
-Tokenizer.h
-/home/pi/code/DTB_Lab/_libMQTT/Tokenizer.h
-algorithm
--
-iostream
 -
 
 /home/pi/code/DTB_Lab/_libMQTT/Tokenizer.h
@@ -69,12 +45,6 @@ string
 -
 vector
 -
-
-/home/pi/code/DTB_Lab/_libMQTT/Topic.cpp
-Topic.h
-/home/pi/code/DTB_Lab/_libMQTT/Topic.h
-Tokenizer.h
-/home/pi/code/DTB_Lab/_libMQTT/Tokenizer.h
 
 /home/pi/code/DTB_Lab/_libMQTT/Topic.h
 string

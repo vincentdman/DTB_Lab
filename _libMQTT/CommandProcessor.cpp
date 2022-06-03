@@ -9,13 +9,15 @@
 
 CommandProcessor::CommandProcessor(const std::string &appname,
                                    const std::string &clientname,
-                                   const std::string &host, int port)
+                                   const std::string &host,
+                                   const std::string &subtopic,
+                                    int port)
    : mosqpp::mosquittopp{( /*HOSTNAME + */appname + clientname).c_str()}
    , className_{__func__}
    , appname_{appname}
    , clientname_{clientname}
    , topicRoot_{MQTT_TOPIC_ROOT}
-   , topicCommandRoot_{"roombatvms/commands"}
+   , topicCommandRoot_{subtopic}
    , commands_{}
 {
    
