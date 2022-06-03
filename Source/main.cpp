@@ -105,7 +105,7 @@ void DataBase()
                 pres.clear();
                 
                 temp = TemperatureGetter.get_received_command();
-               std::cout<<temp[0]<<std::endl; 
+                std::cout<<temp[0]<<std::endl; 
                 hum = HumidityGetter.get_received_command();
                 pres = PressureGetter.get_received_command();
             }
@@ -133,8 +133,8 @@ void DataBase()
             }
         }
 
-        sqlite3_open("../DataBaseStorage/DataBaseMV.db", &db);
-
+        int ret = sqlite3_open("/home/pi/code/DTB_Lab/DataBaseStorage/DataBaseMV.db", &db);
+        std::cout << "ret = " << ret << std::endl;
         auto current = std::chrono::system_clock::now();
         std::time_t current_time = std::chrono::system_clock::to_time_t(current);
         tm* tm_local = localtime(&current_time);
@@ -152,7 +152,9 @@ void DataBase()
         std::cout << sql << std::endl;
 
 
-    sqlite3_exec(db, sql.c_str(), callback, 0, &zErrMsg);
+    int ret2 = sqlite3_exec(db, sql.c_str(), callback, 0, &zErrMsg);
+    std::cout << "ret2 = " << ret2 << std::endl;
+    std::cout << zErrMsg << std::endl; 
     sqlite3_close(db);
     node1 = false;
     node2 = false;
