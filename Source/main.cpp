@@ -66,79 +66,70 @@ void MQTT_Updater(int Interval = 5)
 void DataBase()
 {
     sqlite3 *db;
-    int rc;
-    rc = sqlite3_open("test.db", &db);
 
-    const auto p1 = std::chrono::system_clock::now();
-    std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count();
     sleep(1); //so its slower than publish task       
-    int MessageGotten = 0;
-  
+    char* zErrMsg = 0;
 
-    while(1){
-    if (MqttHandler.get_flag())
+    while (1) 
     {
-           
-            //LOG(LOG::INFO)<<"System received MQTT command from user and will execute it";
-    std::cout<<"MQTT received: " <<  MqttHandler.get_received_command() << std::endl;
-            //MqttHandler.publishInfo("testbericht", "roombatvms/mode");
-           // sleep(1);
-    }
- 
     
+        char temp1[1000];
+        char temp2[1000];
+        char hum1[1000];
+        char hum2[1000];
+        char pres1[1000];
+        char pres2[1000];
+        char NODE_ID1[5];
+        char NODE_ID2[5];
+        char location1[100];
+        char location2[100];
+        bool node1 = false;
+        bool node2 = false;
 
-    if(TemperatureGetter.get_flag())
-    {
-        std::string received = TemperatureGetter.get_received_command();
-        // std::string Item0 = received.substr(0, received.find(delimiter));
-        // std::string Item1 = received.substr(1, received.find(delimiter));
-        // std::string Item2 = received.substr(2, received.find(delimiter));
-        // std::string Item3 = received.substr(3, received.find(delimiter));
+        while (node1 && node2)
+        {
+            if (PressureGetter.get_flag())
+            {
+                temp = TemperatureGetter.get_received_command();
+                hum = HumidityGetter.get_received_command();
+                pres = PressureGetter.get_received_command();
+            }
 
-        // std::cout << "received: " << Item0 << std::endl; 
-        //  std::cout << "received: " << Item1 << std::endl; 
-        //   std::cout << "received: " << Item2 << std::endl; 
-        //    std::cout << "received: " << Item3 << std::endl; 
+            if (temp[0] == '1')
+            {
+                NODE_ID = "1";
+                location = "Vincent";
+                node1 = true;
 
-size_t pos = 0;
-std::string token;
+            }
+            if (temp[0] == '2')
+            {
+                NODE_ID = "2";
+                location = "Marijn";
+                node2 = true;
+            }
+        }
 
-while ((pos = received.find(delimiter)) != std::string::npos) 
-{
-    token = received.substr(0, pos);
-    std::cout << token << std::endl;
-    received.erase(0, pos + delimiter.length());
+        //sqlite3_open("DataBaseMV.db", &db);
 
-    
-}
+        auto current = std::chrono::system_clock::now();
+        std::time_t current_time = std::chrono::system_clock::to_time_t(current);
+        tm* tm_local = localtime(&current_time);
 
+        char* sql = "INSERT INTO timestamp_measurement(UNIX_TIME, current_hour, current_minute, current_second, current_day, current_year) VALUES(" + std::to_string(current_time) + "," + std::to_string(tm_local->tm_hour) + "," + ::to_string(tm_local->tm_minute) + "," + ::to_string(tm_local->tm_second) + "," + ::to_string(tm_local->tm_yday) + "," + ::to_string(tm_local->tm_year) + ");" \
+            "INSERT INTO node(NODE_ID, location, UNIX_TIME) VALUES(" + NODE_ID1 + "," + location1 + "," + std::to_string(current_time) + "); " \
+            "INSERT INTO node(NODE_ID, location, UNIX_TIME) VALUES(" + NODE_ID2 + "," + location2 + "," + std::to_string(current_time) + "); " \
+            "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + temp1 + ");" \
+            "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + hum1 + ");" \
+            "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + pres1 + ");" \
+            "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + temp2 + ");" \
+            "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + hum2 + ");" \
+            "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + pres2 + ");";
 
-        //std::string token = s.substr(0, s.find(delimiter));
-        
-        std::cout<<"Temperature received: " <<  TemperatureGetter.get_received_command() << std::endl;
-        MessageGotten++; 
     }
-    if(HumidityGetter.get_flag())
-    {
-        std::cout<<"Humidity received: " <<  HumidityGetter.get_received_command() << std::endl;
-        MessageGotten++; 
-    }
-    if(PressureGetter.get_flag())
-    {
-        std::cout<<"Pressure received: " <<  PressureGetter.get_received_command() << std::endl;
-        MessageGotten++; 
-    }
-    if(MessageGotten >= 3)
-    {
-        MessageGotten = 0;
-        const auto p1 = std::chrono::system_clock::now();
-        std::cout << "received at: " << std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count()<<"\n";
-        //std::cout << std::sys_seconds( std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
-        
-        std::cout << "\n\n\n";
 
-    }
-
-
+    std::cout << sql << endl;
+    //sqlite3_exec(db, sql, callback, 0, &zErrMsg);
+    //sqlite3_close(db);
     }
 }
