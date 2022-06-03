@@ -72,21 +72,23 @@ void DataBase()
 
     while (1) 
     {
-    
-        char temp1[1000];
-        char temp2[1000];
-        char hum1[1000];
-        char hum2[1000];
-        char pres1[1000];
-        char pres2[1000];
-        char NODE_ID1[5];
-        char NODE_ID2[5];
-        char location1[100];
-        char location2[100];
+        std::string temp;
+        std::string hum;
+        std::string pres;
+        std::string temp1;
+        std::string temp2;
+        std::string hum1;
+        std::string hum2;
+        std::string pres1;
+        std::string pres2;
+        std::string NODE_ID1;
+        std::string NODE_ID2;
+        std::string location1;
+        std::string location2;
         bool node1 = false;
-        bool node2 = false;
+        bool node2 = true;
 
-        while (node1 && node2)
+        while (!node1 && !node2)
         {
             if (PressureGetter.get_flag())
             {
@@ -97,15 +99,21 @@ void DataBase()
 
             if (temp[0] == '1')
             {
-                NODE_ID = "1";
-                location = "Vincent";
+                temp1 = temp;
+                hum1 = hum;
+                pres1 = pres;
+                NODE_ID1 = "1";
+                location1 = "Vincent";
                 node1 = true;
 
             }
             if (temp[0] == '2')
             {
-                NODE_ID = "2";
-                location = "Marijn";
+                temp2 = temp;
+                hum2 = hum;
+                pres2 = pres;
+                NODE_ID2 = "2";
+                location2 = "Marijn";
                 node2 = true;
             }
         }
@@ -116,7 +124,7 @@ void DataBase()
         std::time_t current_time = std::chrono::system_clock::to_time_t(current);
         tm* tm_local = localtime(&current_time);
 
-        char* sql = "INSERT INTO timestamp_measurement(UNIX_TIME, current_hour, current_minute, current_second, current_day, current_year) VALUES(" + std::to_string(current_time) + "," + std::to_string(tm_local->tm_hour) + "," + ::to_string(tm_local->tm_minute) + "," + ::to_string(tm_local->tm_second) + "," + ::to_string(tm_local->tm_yday) + "," + ::to_string(tm_local->tm_year) + ");" \
+        std::string sql = "INSERT INTO timestamp_measurement(UNIX_TIME, current_hour, current_minute, current_second, current_day, current_year) VALUES(" + std::to_string(current_time) + "," + std::to_string(tm_local->tm_hour) + "," + std::to_string(tm_local->tm_min) + "," + std::to_string(tm_local->tm_sec) + "," + std::to_string(tm_local->tm_yday) + "," + std::to_string(tm_local->tm_year) + ");" \
             "INSERT INTO node(NODE_ID, location, UNIX_TIME) VALUES(" + NODE_ID1 + "," + location1 + "," + std::to_string(current_time) + "); " \
             "INSERT INTO node(NODE_ID, location, UNIX_TIME) VALUES(" + NODE_ID2 + "," + location2 + "," + std::to_string(current_time) + "); " \
             "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + temp1 + ");" \
@@ -126,10 +134,12 @@ void DataBase()
             "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + hum2 + ");" \
             "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + pres2 + ");";
 
-    }
+        std::cout << sql << std::endl;
 
-    std::cout << sql << endl;
+
     //sqlite3_exec(db, sql, callback, 0, &zErrMsg);
     //sqlite3_close(db);
+    //node1 = false;
+    //node2 = false;
     }
 }
