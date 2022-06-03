@@ -1,0 +1,102 @@
+[
+{
+  "directory": "/home/pi/code/DTB_Lab/build/Source",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++ -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_REGEX_DYN_LINK -I/home/pi/code/DTB_Lab/Include -I/home/pi/code/DTB_Lab/_libMQTT -I/home/pi/code/DTB_Lab/_libUtils -I/home/pi/code/DTB_Lab/_libUtils/INIreader -I/home/pi/code/DTB_Lab/_libUtils/JSON -I/home/pi/code/DTB_Lab/_libUtils/SerialLink -I/home/pi/code/DTB_Lab/_libSenseHAT -g -std=gnu++17 -o CMakeFiles/roomba.dir/main.cpp.o -c /home/pi/code/DTB_Lab/Source/main.cpp",
+  "file": "/home/pi/code/DTB_Lab/Source/main.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/Source",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++ -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_REGEX_DYN_LINK -I/home/pi/code/DTB_Lab/Include -I/home/pi/code/DTB_Lab/_libMQTT -I/home/pi/code/DTB_Lab/_libUtils -I/home/pi/code/DTB_Lab/_libUtils/INIreader -I/home/pi/code/DTB_Lab/_libUtils/JSON -I/home/pi/code/DTB_Lab/_libUtils/SerialLink -I/home/pi/code/DTB_Lab/_libSenseHAT -g -std=gnu++17 -o CMakeFiles/roomba.dir/LOG_FILE.cpp.o -c /home/pi/code/DTB_Lab/Source/LOG_FILE.cpp",
+  "file": "/home/pi/code/DTB_Lab/Source/LOG_FILE.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/Source",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++ -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_REGEX_DYN_LINK -I/home/pi/code/DTB_Lab/Include -I/home/pi/code/DTB_Lab/_libMQTT -I/home/pi/code/DTB_Lab/_libUtils -I/home/pi/code/DTB_Lab/_libUtils/INIreader -I/home/pi/code/DTB_Lab/_libUtils/JSON -I/home/pi/code/DTB_Lab/_libUtils/SerialLink -I/home/pi/code/DTB_Lab/_libSenseHAT -g -std=gnu++17 -o CMakeFiles/roomba.dir/LOG.cpp.o -c /home/pi/code/DTB_Lab/Source/LOG.cpp",
+  "file": "/home/pi/code/DTB_Lab/Source/LOG.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/Source",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++ -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_REGEX_DYN_LINK -I/home/pi/code/DTB_Lab/Include -I/home/pi/code/DTB_Lab/_libMQTT -I/home/pi/code/DTB_Lab/_libUtils -I/home/pi/code/DTB_Lab/_libUtils/INIreader -I/home/pi/code/DTB_Lab/_libUtils/JSON -I/home/pi/code/DTB_Lab/_libUtils/SerialLink -I/home/pi/code/DTB_Lab/_libSenseHAT -g -std=gnu++17 -o CMakeFiles/roomba.dir/BatteryIndicator.cpp.o -c /home/pi/code/DTB_Lab/Source/BatteryIndicator.cpp",
+  "file": "/home/pi/code/DTB_Lab/Source/BatteryIndicator.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/Source",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++ -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_REGEX_DYN_LINK -I/home/pi/code/DTB_Lab/Include -I/home/pi/code/DTB_Lab/_libMQTT -I/home/pi/code/DTB_Lab/_libUtils -I/home/pi/code/DTB_Lab/_libUtils/INIreader -I/home/pi/code/DTB_Lab/_libUtils/JSON -I/home/pi/code/DTB_Lab/_libUtils/SerialLink -I/home/pi/code/DTB_Lab/_libSenseHAT -g -std=gnu++17 -o CMakeFiles/roomba.dir/RoombaSerial.cpp.o -c /home/pi/code/DTB_Lab/Source/RoombaSerial.cpp",
+  "file": "/home/pi/code/DTB_Lab/Source/RoombaSerial.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/Source",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++ -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_REGEX_DYN_LINK -I/home/pi/code/DTB_Lab/Include -I/home/pi/code/DTB_Lab/_libMQTT -I/home/pi/code/DTB_Lab/_libUtils -I/home/pi/code/DTB_Lab/_libUtils/INIreader -I/home/pi/code/DTB_Lab/_libUtils/JSON -I/home/pi/code/DTB_Lab/_libUtils/SerialLink -I/home/pi/code/DTB_Lab/_libSenseHAT -g -std=gnu++17 -o CMakeFiles/roomba.dir/ThreadFunctions.cpp.o -c /home/pi/code/DTB_Lab/Source/ThreadFunctions.cpp",
+  "file": "/home/pi/code/DTB_Lab/Source/ThreadFunctions.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/Source",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++ -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_REGEX_DYN_LINK -I/home/pi/code/DTB_Lab/Include -I/home/pi/code/DTB_Lab/_libMQTT -I/home/pi/code/DTB_Lab/_libUtils -I/home/pi/code/DTB_Lab/_libUtils/INIreader -I/home/pi/code/DTB_Lab/_libUtils/JSON -I/home/pi/code/DTB_Lab/_libUtils/SerialLink -I/home/pi/code/DTB_Lab/_libSenseHAT -g -std=gnu++17 -o CMakeFiles/roomba.dir/SignalHandler.cpp.o -c /home/pi/code/DTB_Lab/Source/SignalHandler.cpp",
+  "file": "/home/pi/code/DTB_Lab/Source/SignalHandler.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/_libSenseHAT",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++  -I/home/pi/code/DTB_Lab/_libSenseHAT -g -std=gnu++17 -o CMakeFiles/_libSenseHAT.dir/Joystick.cpp.o -c /home/pi/code/DTB_Lab/_libSenseHAT/Joystick.cpp",
+  "file": "/home/pi/code/DTB_Lab/_libSenseHAT/Joystick.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/_libSenseHAT",
+  "command": "/usr/bin/arm-linux-gnueabihf-gcc  -I/home/pi/code/DTB_Lab/_libSenseHAT -g -o CMakeFiles/_libSenseHAT.dir/JoystickDevice.c.o -c /home/pi/code/DTB_Lab/_libSenseHAT/JoystickDevice.c",
+  "file": "/home/pi/code/DTB_Lab/_libSenseHAT/JoystickDevice.c"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/_libSenseHAT",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++  -I/home/pi/code/DTB_Lab/_libSenseHAT -g -std=gnu++17 -o CMakeFiles/_libSenseHAT.dir/LedMatrix.cpp.o -c /home/pi/code/DTB_Lab/_libSenseHAT/LedMatrix.cpp",
+  "file": "/home/pi/code/DTB_Lab/_libSenseHAT/LedMatrix.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/_libSenseHAT",
+  "command": "/usr/bin/arm-linux-gnueabihf-gcc  -I/home/pi/code/DTB_Lab/_libSenseHAT -g -o CMakeFiles/_libSenseHAT.dir/LedMatrixDevice.c.o -c /home/pi/code/DTB_Lab/_libSenseHAT/LedMatrixDevice.c",
+  "file": "/home/pi/code/DTB_Lab/_libSenseHAT/LedMatrixDevice.c"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/_libSenseHAT",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++  -I/home/pi/code/DTB_Lab/_libSenseHAT -g -std=gnu++17 -o CMakeFiles/_libSenseHAT.dir/Pixel.cpp.o -c /home/pi/code/DTB_Lab/_libSenseHAT/Pixel.cpp",
+  "file": "/home/pi/code/DTB_Lab/_libSenseHAT/Pixel.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/_libSenseHAT",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++  -I/home/pi/code/DTB_Lab/_libSenseHAT -g -std=gnu++17 -o CMakeFiles/_libSenseHAT.dir/SenseHAT.cpp.o -c /home/pi/code/DTB_Lab/_libSenseHAT/SenseHAT.cpp",
+  "file": "/home/pi/code/DTB_Lab/_libSenseHAT/SenseHAT.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/_libUtils",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++ -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_REGEX_DYN_LINK -I/home/pi/code/DTB_Lab/_libUtils -I/home/pi/code/DTB_Lab/_libUtils/INIreader -I/home/pi/code/DTB_Lab/_libUtils/JSON -I/home/pi/code/DTB_Lab/_libUtils/SerialLink -g -std=gnu++17 -o CMakeFiles/_libUtils.dir/INIreader/INIreader.cpp.o -c /home/pi/code/DTB_Lab/_libUtils/INIreader/INIreader.cpp",
+  "file": "/home/pi/code/DTB_Lab/_libUtils/INIreader/INIreader.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/_libUtils",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++ -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_REGEX_DYN_LINK -I/home/pi/code/DTB_Lab/_libUtils -I/home/pi/code/DTB_Lab/_libUtils/INIreader -I/home/pi/code/DTB_Lab/_libUtils/JSON -I/home/pi/code/DTB_Lab/_libUtils/SerialLink -g -std=gnu++17 -o CMakeFiles/_libUtils.dir/SerialLink/SerialLink.cpp.o -c /home/pi/code/DTB_Lab/_libUtils/SerialLink/SerialLink.cpp",
+  "file": "/home/pi/code/DTB_Lab/_libUtils/SerialLink/SerialLink.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/_libMQTT",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++  -I/home/pi/code/DTB_Lab/_libMQTT -g -std=gnu++17 -o CMakeFiles/_libMQTT.dir/CommandProcessor.cpp.o -c /home/pi/code/DTB_Lab/_libMQTT/CommandProcessor.cpp",
+  "file": "/home/pi/code/DTB_Lab/_libMQTT/CommandProcessor.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/_libMQTT",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++  -I/home/pi/code/DTB_Lab/_libMQTT -g -std=gnu++17 -o CMakeFiles/_libMQTT.dir/MQTTconfig.cpp.o -c /home/pi/code/DTB_Lab/_libMQTT/MQTTconfig.cpp",
+  "file": "/home/pi/code/DTB_Lab/_libMQTT/MQTTconfig.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/_libMQTT",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++  -I/home/pi/code/DTB_Lab/_libMQTT -g -std=gnu++17 -o CMakeFiles/_libMQTT.dir/MQTTmessage.cpp.o -c /home/pi/code/DTB_Lab/_libMQTT/MQTTmessage.cpp",
+  "file": "/home/pi/code/DTB_Lab/_libMQTT/MQTTmessage.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/_libMQTT",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++  -I/home/pi/code/DTB_Lab/_libMQTT -g -std=gnu++17 -o CMakeFiles/_libMQTT.dir/Tokenizer.cpp.o -c /home/pi/code/DTB_Lab/_libMQTT/Tokenizer.cpp",
+  "file": "/home/pi/code/DTB_Lab/_libMQTT/Tokenizer.cpp"
+},
+{
+  "directory": "/home/pi/code/DTB_Lab/build/_libMQTT",
+  "command": "/usr/bin/arm-linux-gnueabihf-g++  -I/home/pi/code/DTB_Lab/_libMQTT -g -std=gnu++17 -o CMakeFiles/_libMQTT.dir/Topic.cpp.o -c /home/pi/code/DTB_Lab/_libMQTT/Topic.cpp",
+  "file": "/home/pi/code/DTB_Lab/_libMQTT/Topic.cpp"
+}
+]

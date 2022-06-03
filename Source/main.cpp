@@ -9,6 +9,7 @@
  */
 
 #include "main.h"
+#include <sqlite3.h> 
 
 CommandProcessor MqttHandler(appname, clientname, host, port);
 SenseHAT SensHat;
@@ -23,8 +24,10 @@ int main(void)
 {
     struct sigaction sa;
     set_signal(sa);
-
-
+    sqlite3 *db;
+    int rc;
+    rc = sqlite3_open("test.db", &db);
+    
     //StartRoomba(); 
     while(1){
     if (MqttHandler.get_flag())
@@ -41,7 +44,7 @@ int main(void)
   
     
     MqttHandler.publishInfo( std::to_string(SensHat.get_temperature() ), "roombatvms/Temperature");
-       MqttHandler.publishInfo( std::to_string(  SensHat.get_humidity() ), "roombatvms/Humidity");
+    MqttHandler.publishInfo( std::to_string(SensHat.get_humidity() ), "roombatvms/Humidity");
     MqttHandler.publishInfo( std::to_string(SensHat.get_pressure() ), "roombatvms/Pressure");
     sleep(1);
    

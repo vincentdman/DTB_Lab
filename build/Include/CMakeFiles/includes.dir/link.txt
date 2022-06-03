@@ -1,0 +1,2 @@
+/usr/bin/arm-linux-gnueabihf-ar qc libincludes.a 
+/usr/bin/arm-linux-gnueabihf-ranlib libincludes.a

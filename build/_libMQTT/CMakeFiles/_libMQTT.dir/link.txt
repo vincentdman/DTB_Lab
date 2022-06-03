@@ -1,0 +1,2 @@
+/usr/bin/arm-linux-gnueabihf-ar qc lib_libMQTT.a CMakeFiles/_libMQTT.dir/CommandProcessor.cpp.o CMakeFiles/_libMQTT.dir/MQTTconfig.cpp.o CMakeFiles/_libMQTT.dir/MQTTmessage.cpp.o CMakeFiles/_libMQTT.dir/Tokenizer.cpp.o CMakeFiles/_libMQTT.dir/Topic.cpp.o
+/usr/bin/arm-linux-gnueabihf-ranlib lib_libMQTT.a
