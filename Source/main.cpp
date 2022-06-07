@@ -22,7 +22,7 @@ CommandProcessor PressureGetter(appname, "Pressure", host, "DataBaseMV/Pressure"
 CommandProcessor HumidityGetter(appname, "Humidity", host, "DataBaseMV/Humidity" , port);
 const int NodeID = 0x01; 
 const std::string delimiter = ", ";
-long long int SampleNumber = 0;
+long long int SampleNumber = 10;
 const short int Resolution = 16; 
 
 static int callback(void* NotUsed, int argc, char** argv, char** azColName){
@@ -61,9 +61,9 @@ void MQTT_Updater(int Interval = 5)
     while(1)
     {
     MqttHandler.publishInfo(std::to_string(NodeID) + delimiter + std::to_string(NodeID) + std::to_string(SampleNumber) + delimiter + "'Temperature'" + delimiter + std::to_string(static_cast<int>(SensHat.get_temperature()) )  + delimiter + "'C'" + delimiter + std::to_string(Resolution) , "DataBaseMV/Temperature");
-    SampleNumber++;
+    //SampleNumber++;
     MqttHandler.publishInfo(std::to_string(NodeID) + delimiter + std::to_string(NodeID) + std::to_string(SampleNumber) + delimiter + "'Humidity'" + delimiter + std::to_string(static_cast<int>(SensHat.get_humidity()) )  + delimiter + "'%rh'" + delimiter + std::to_string(Resolution) , "DataBaseMV/Humidity");
-    SampleNumber++;
+    //SampleNumber++;
     MqttHandler.publishInfo(std::to_string(NodeID) + delimiter + std::to_string(NodeID) + std::to_string(SampleNumber) + delimiter + "'Pressure'" + delimiter + std::to_string(static_cast<int>(SensHat.get_pressure()) )  + delimiter + "'hPa'" + delimiter + std::to_string(Resolution) , "DataBaseMV/Pressure");
     SampleNumber++;
     sleep(Interval);
@@ -133,18 +133,18 @@ void DataBase()
             }
         }
 
-        int ret = sqlite3_open("/home/pi/code/DTB_Lab/DataBaseStorage/DataBaseMV.db", &db);
+        int ret = sqlite3_open("/home/pi/git/DTB_Lab/DataBaseStorage/DataBaseMV.db", &db);
         std::cout << "ret = " << ret << std::endl;
         auto current = std::chrono::system_clock::now();
         std::time_t current_time = std::chrono::system_clock::to_time_t(current);
         tm* tm_local = localtime(&current_time);
 
         std::string sql = "INSERT INTO timestamp_measurement(UNIX_TIME, current_hour, current_minute, current_second, current_day, current_year) VALUES(" + std::to_string(current_time) + "," + std::to_string(tm_local->tm_hour) + "," + std::to_string(tm_local->tm_min) + "," + std::to_string(tm_local->tm_sec) + "," + std::to_string(tm_local->tm_yday) + "," + std::to_string(tm_local->tm_year) + ");" \
-            "INSERT INTO node(NODE_ID, location, UNIX_TIME) VALUES(" + NODE_ID1 + "," + "'" + location1 + "'" + "," + std::to_string(current_time) + "); " \
-            "INSERT INTO node(NODE_ID, location, UNIX_TIME) VALUES(" + NODE_ID2 + "," + "'" + location2 + "'" + "," + std::to_string(current_time) + "); " \
+            "INSERT INTO node(NODE_ID, location, UNIX_TIME, SAMPLE_NO) VALUES(" + NODE_ID1 + "," + "'" + location1 + "'" + "," + std::to_string(current_time) + "," + temp1[3] + temp1[4] + temp1[5] + "); " \
+            "INSERT INTO node(NODE_ID, location, UNIX_TIME) VALUES(" + NODE_ID2 + "," + "'" + location2 + "'" + "," + std::to_string(current_time) + "," + temp1[0] + temp1[1] + temp1[2] + "); " \
             "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + temp1 + ");" \
             "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + hum1 + ");" \
-            "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + pres1 + ");" \
+            "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + pres1 + ");"; \
             "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + temp2 + ");" \
             "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + hum2 + ");" \
             "INSERT INTO sample(NODE_ID, SAMPLE_NO, measured_variable, value, unit, resolution) VALUES(" + pres2 + ");";
@@ -157,6 +157,6 @@ void DataBase()
     std::cout << zErrMsg << std::endl; 
     sqlite3_close(db);
     node1 = false;
-    node2 = false;
+    //node2 = false;
     }
 }
